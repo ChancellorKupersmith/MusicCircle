@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/upload_song"
+        android:title="UPLOAD SONG" />
+    <item
+        android:id="@+id/create_event"
+        android:title="CREATE EVENT"/>
+    <item
+        android:id="@+id/create_group"
+        android:title="CREATE GROUP"/>
+    <item
+        android:id="@+id/music_player"
+        android:title="MUSIC PLAYER"/>
+</menu>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/holo_blue"
+    tools:context=".Fragments.Music_Player.ShareWithFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:name="com.example.musiccircle.Fragments.Music_Player.ShareWithFragment"
+        android:layout_width="match_parent"
+        android:layout_height="667dp"
+        app:layoutManager="LinearLayoutManager"
+        android:backgroundTint="@color/holo_blue"
+        app:layout_constraintBottom_toTopOf="@+id/btn_share"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".Fragments.Music_Player.ShareWithFragment"
+        tools:listitem="@layout/fragment_share_with" />
+
+    <Button
+        android:id="@+id/btn_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        android:background="@drawable/circular_box_blue"
+        android:backgroundTint="@color/exo_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

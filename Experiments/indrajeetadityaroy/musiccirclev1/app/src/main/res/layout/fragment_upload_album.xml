@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="80dp"
+    tools:context=".UploadAlbumFrag">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/Album_Name_Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/album_name_hint"
+            android:inputType="textPersonName"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/Artist_Name_Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/username_name_hint"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/Song_Id_Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/song_id_hint"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_Upload_Album"
+        android:text="@string/upload_album_btn"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:layout_marginTop="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+
+</LinearLayout>

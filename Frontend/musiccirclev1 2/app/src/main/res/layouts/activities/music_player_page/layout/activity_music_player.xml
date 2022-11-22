@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Music_Player_Page.MusicPlayerActivity"
+    android:weightSum="1"
+    android:background="@android:color/holo_blue_light">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:layout_weight="70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".Fragments.Music_Player.MusicPlayerFragment"
+            android:background="@android:color/holo_blue_light">
+
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/musicPlayerGui"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:stateListAnimator="@null"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shutter_background_color="@android:color/transparent"
+                app:surface_type="none">
+
+            </com.google.android.exoplayer2.ui.PlayerView>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/btn_Artist_Profile_Page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|left"
+                android:layout_margin="0dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:fab_colorNormal="@android:color/holo_blue_light"
+                app:fab_showShadow="true"
+
+                app:layout_constraintEnd_toStartOf="@+id/fam_MusicPlayerMoreOptions"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></com.github.clans.fab.FloatingActionButton>
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/fam_MusicPlayerMoreOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="4dp"
+
+                app:layout_constraintEnd_toEndOf="@+id/musicPlayerGui"
+                app:layout_constraintTop_toTopOf="parent"
+                app:menu_backgroundColor="@android:color/transparent"
+                app:menu_colorNormal="@android:color/holo_blue_light"
+                app:menu_fab_label=""
+                app:menu_labels_showShadow="true"
+                app:menu_openDirection="down">
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_Comments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic__sms"
+                    app:fab_colorNormal="@android:color/holo_blue_light"
+                    app:fab_label="Comments"
+                    app:fab_size="mini"></com.github.clans.fab.FloatingActionButton>
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_Track_List"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_tracklist"
+                    app:fab_colorNormal="@android:color/holo_blue_light"
+                    app:fab_label="Tracks"
+                    app:fab_size="mini"></com.github.clans.fab.FloatingActionButton>
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_Like_Song"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_favorite_24"
+                    app:fab_colorNormal="@android:color/holo_blue_light"
+                    app:fab_label="Like"
+                    app:fab_size="mini"></com.github.clans.fab.FloatingActionButton>
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_Add_To_Playlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add_white"
+                    app:fab_colorNormal="@android:color/holo_blue_light"
+                    app:fab_label="Add To Playlist"
+                    app:fab_size="mini"></com.github.clans.fab.FloatingActionButton>
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_Share_Song"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_share_white"
+                    app:fab_colorNormal="@android:color/holo_blue_light"
+                    app:fab_label="Share"
+                    app:fab_size="mini"></com.github.clans.fab.FloatingActionButton>
+
+            </com.github.clans.fab.FloatingActionMenu>
+
+            <Button
+                android:id="@+id/btn_Song_Artist_Link"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                android:text="Artist Name"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/musicPlayerGui" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        <FrameLayout-->
+<!--            android:id="@+id/MusicPlayer_Placeholder"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_anchorGravity="center"></FrameLayout>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="379dp"
+        android:layout_weight="30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:id="@+id/Comments_Placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:layout_anchorGravity="center"></FrameLayout>
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

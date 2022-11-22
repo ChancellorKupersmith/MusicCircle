@@ -1,0 +1,82 @@
+stages:
+  - mavenbuild
+  - maventest
+  - mavenDeploy
+  - androidbuild
+  - androidtest
+
+maven-build:
+   stage: mavenbuild
+   tags:
+    - springboot_main_tag
+   script:
+     - echo "Running jar file experiment:"
+     - ls
+     - cd Backend
+     - ls
+     - cd music_circle_backend
+     - ls
+     - mvn clean
+     - mvn package -B
+     - ls
+     - cd target
+     - ls
+
+maven-test:
+   stage: maventest
+   tags:
+     - springboot_main_tag
+   script:
+     - cd Backend/music_circle_backend
+     - mvn test
+   artifacts:
+    paths:
+      - Backend/music_circle_backend/target/music_circle_backend-0.0.1-SNAPSHOT.jar
+
+autoDeploy:
+     stage: mavenDeploy
+     tags:
+       - springboot_main_tag
+     script:
+      - cd Backend/music_circle_backend
+      - mvn package -DskipTests
+      - sudo mv target/music_circle_backend-0.0.1-SNAPSHOT.jar /target/web-demo.jar
+      - sudo systemctl stop system-web-demo
+      - sudo systemctl start system-web-demo
+#edit to start server1
+# This wasn't working for me so i've temporarily commented it out
+# android-build:
+#     image: javiersantos/android-ci:latest
+#     stage: androidbuild
+    
+#     before_script:
+#       - export GRADLE_USER_HOME=`pwd`/.gradle
+#       - chmod +x ./Frontend/"musiccirclev1 2"/gradlew
+ 
+#     tags:
+#       - frontend-runner-1
+    
+#     script:
+#       - cd Frontend/"musiccirclev1 2"/
+#       - ./gradlew build
+     
+      
+#     artifacts:
+#         paths:
+#           - Frontend/"musiccirclev1 2"/app/build/outputs/
+          
+# android-test: 
+#   image: javiersantos/android-ci:latest
+#   stage: androidtest
+  
+#   before_script: 
+#     - export GRADLE_USER_HOME=`pwd`/.gradle
+#     - chmod +x ./Frontend/"musiccirclev1 2"/gradlew
+    
+#   tags: 
+#     - frontend-runner-1
+    
+#   script: 
+#     - cd Frontend/"musiccirclev1 2"/
+#     - ./gradlew test
+

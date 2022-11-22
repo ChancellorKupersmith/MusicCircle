@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetContainer3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="UPLOAD SONG"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/audio_file_preview"
+        android:layout_marginTop="15dp"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="200dp"/>
+
+    <Button
+        android:id="@+id/choose_audio_file"
+        android:text="CHOOSE AUDIO FILE"
+        android:background="@drawable/rounded_box"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:backgroundTint="@android:color/white"
+        android:background="@drawable/rounded_box"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/audio_file_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Song Name"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:backgroundTint="@android:color/white"
+        android:background="@drawable/rounded_box"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/audio_file_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Artist"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_audiofile_1"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_box"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="UPLOAD"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

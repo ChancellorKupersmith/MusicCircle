@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/LinearLayout02"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:id="@+id/near_events_text"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:paddingTop="10dp"
+                android:layout_marginStart="10dp"
+                android:text="Events Near"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                android:layout_marginLeft="10dp" />
+            <TextView
+                android:id="@+id/near_events_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:paddingTop="10dp"
+                android:layout_marginStart="10dp"
+                android:text="Me"
+                android:entries="@array/state_arrays1"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                android:layout_marginLeft="10dp" />
+            <Spinner
+                android:id="@+id/event_state_spinner"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rounded_input_box"
+                android:entries="@array/state_arrays1"
+                android:prompt="@string/country_prompt" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/local_events_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:scrollbars="horizontal"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:id="@+id/top_songs_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="Recently Listened To"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/local_songs_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:scrollbars="horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp" />
+        <TextView
+            android:id="@+id/top_artists_text"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Following"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/following_user_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:scrollbars="horizontal"
+            android:layout_marginRight="10dp" />
+    </LinearLayout>
+</ScrollView>

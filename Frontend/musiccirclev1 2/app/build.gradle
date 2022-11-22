@@ -1,0 +1,133 @@
+apply plugin: 'com.android.application'
+apply plugin: 'androidx.navigation.safeargs'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
+
+    defaultConfig {
+        applicationId "com.example.musiccircle"
+        minSdkVersion 26
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src\\main\\res', 'src\\main\\res\\layouts\\activities', 'src\\main\\res\\layouts\\fragments', 'src\\main\\res\\layouts\\activities\\home_page', 'src\\main\\res\\layouts\\activities\\music_player_page', 'src\\main\\res\\layouts\\activities\\profile_page', 'src\\main\\res\\layouts\\activities\\search_results_page', 'src\\main\\res\\layouts\\fragments\\home', 'src\\main\\res\\layouts\\fragments\\music_player', 'src\\main\\res\\layouts\\fragments\\comments', 'src\\main\\res\\layouts\\fragments\\login', 'src\\main\\res\\layouts\\fragments\\profile', 'src\\main\\res\\layouts\\fragments\\search_results', 'src\\main\\res\\layouts\\fragments\\throwaway', 'src\\main\\res\\layouts\\activities\\login', 'src\\main\\res\\layouts\\activities\\events_page', 'src\\main\\res\\layouts\\fragments\\event', 'src\\main\\res\\layouts\\fragments\\group', 'src\\main\\res\\layouts\\fragments\\share', 'src\\main\\res\\layouts\\activities\\group'
+            }
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+//android {
+//    defaultConfig{
+//        vectorDrawables.useSupportLibrary = true
+//    }
+//}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:27.1.0'
+    implementation 'com.android.volley:volley:1.1.1'
+    //Looks
+    implementation 'com.google.android.material:material:1.4.0-alpha02'
+    implementation 'com.karumi:dexter:6.2.2'
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.android.material:material:1.4.0-alpha01'
+    //Navigation
+    def nav_version = "2.3.4"
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+//    implementation "androidx.navigation:navigtion-ui:$nav_version"
+    //Google Maps
+    implementation 'com.google.maps:google-maps-services:0.1.20'
+    implementation 'com.google.maps.android:android-maps-utils:0.4.4'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    //Exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.12.0'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.12.0'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.12.0'
+    //Mockito
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.android.exoplayer:exoplayer:2.13.2'
+    // https://mvnrepository.com/artifact/org.mockito/mockito-core
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '2.10.0'
+    testImplementation "org.robolectric:robolectric:4.5.1"
+    compile 'com.github.clans:fab:1.6.4'
+    compile 'com.sothree.slidinguppanel:library:3.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //noinspection GradleCompatible
+    // implementation 'com.android.volley:volley:1.2.0'
+    implementation 'androidx.viewpager2:viewpager2:1.1.0-alpha01'
+    implementation 'commons-io:commons-io:2.6'
+    implementation 'org.apache.commons:commons-collections4:4.4'
+//    implementation 'dev.dworks.libs:volleyplus:+'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.github.NaikSoftware:StompProtocolAndroid:1.6.4'
+    implementation group: 'io.reactivex.rxjava2', name: 'rxjava', version: '2.2.5'
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.10'
+    compile 'com.github.mirrajabi:search-dialog:1.1'
+
+
+}

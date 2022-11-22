@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    tools:context=".Fragments.Comments.CommentsFragment">
+
+    <FrameLayout
+        android:id="@+id/Post_Comments_Placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="118dp"
+        android:layout_gravity="top"
+        app:layout_anchor="@id/Post_Comments_Placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/Comments_List_Placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="226dp"
+        android:layout_gravity="bottom"
+        app:layout_anchor="@id/Post_Comments_Placeholder"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Post_Comments_Placeholder"></FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

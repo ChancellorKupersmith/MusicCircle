@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/top_events_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="Events"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/events_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:scrollbars="horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:id="@+id/top_songs_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="Songs"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/songs_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:scrollbars="horizontal"
+            android:layout_marginRight="10dp" />
+        <TextView
+            android:id="@+id/top_artists_text"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Hot Artists"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/user_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:scrollbars="horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp" />
+        <TextView
+            android:id="@+id/hot_songs_text"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Hot Songs"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp" />
+        android:textStyle="bold" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/most_liked_songs_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:scrollbars="horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp" />
+
+    </LinearLayout>
+</ScrollView>

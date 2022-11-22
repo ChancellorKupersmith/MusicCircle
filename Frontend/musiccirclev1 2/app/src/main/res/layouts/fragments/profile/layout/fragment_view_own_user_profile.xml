@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_account_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.Profile.ViewOwnProfileFragment"
+    >
+<!--    tools:context=".Fragments.Profile.ViewOtherProfileFragment"-->
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#0096FF" />
+
+    <ScrollView
+        android:id="@+id/scrolView_account"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/linear_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_account_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="10dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:id="@+id/linear_account_input_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/profile_username"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center"
+                                android:text="NAME"
+                                android:textSize="30sp"
+                                android:textStyle="bold"
+                                android:typeface="monospace" />
+
+                            <TextView
+                                android:id="@+id/profile_description"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15sp"
+                                android:fontFamily="sans-serif-light"
+                                android:textColor="#474747"
+                                android:textSize="18sp"
+                                android:textStyle="italic" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:animateLayoutChanges="true"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="11dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <Button
+                                        android:id="@+id/button_num_user_followers"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="33dp"
+                                        android:background="#00FFFFFF"
+                                        android:gravity="center"
+                                        android:text="@string/num_fill_in"
+                                        android:textSize="24sp" />
+
+                                    <Button
+                                        android:id="@+id/button_user_followers_text"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="22dp"
+                                        android:background="#00FFFFFF"
+                                        android:text="@string/followers_text"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="11dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <Button
+                                        android:id="@+id/button_num_user_following"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="33dp"
+                                        android:background="#00FFFFFF"
+                                        android:gravity="center"
+                                        android:text="@string/num_fill_in"
+                                        android:textSize="24sp" />
+
+                                    <Button
+                                        android:id="@+id/button_user_following_text"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="22dp"
+                                        android:background="#00FFFFFF"
+                                        android:text="@string/following_text"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="11dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <Button
+                                        android:id="@+id/button_num_user_groups"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="33dp"
+                                        android:background="#00FFFFFF"
+                                        android:gravity="center"
+                                        android:text="@string/num_fill_in"
+                                        android:textSize="24sp" />
+
+                                    <Button
+                                        android:id="@+id/button_user_groups_text"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="22dp"
+                                        android:background="#00FFFFFF"
+                                        android:text="@string/groups_text"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="11dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <Button
+                                        android:id="@+id/button_num_user_events"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="33dp"
+                                        android:background="#00FFFFFF"
+                                        android:gravity="center"
+                                        android:text="@string/num_fill_in"
+                                        android:textSize="24sp" />
+
+                                    <Button
+                                        android:id="@+id/button_user_events_text"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="22dp"
+                                        android:background="#00FFFFFF"
+                                        android:text="@string/events_text"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/follow_user"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/circular_box"
+                                android:backgroundTint="@drawable/follow_button_background_color"
+                                android:text="@string/edit_profile_button_text"
+                                android:textColor="@drawable/follow_button_text_color"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_list1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/top_songs_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/top_songs_title"
+                            android:textSize="20sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_top_songs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="horizontal" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_list2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/albums_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/albums_title"
+                            android:textSize="20sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_albums"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="horizontal" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_list3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/recent_uploads_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/recent_uploads_title"
+                            android:textSize="20sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_recent_songs"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="horizontal" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_list4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/playlists_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/playlists_title"
+                            android:textSize="20sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_playlists"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="horizontal" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_list5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/Followers_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/followers_title"
+                            android:textSize="20sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_followers"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="horizontal" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_list6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/following_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/following_title"
+                            android:textSize="20sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_following"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="horizontal" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_list7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/Groups_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/groups_title"
+                            android:textSize="20sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_groups"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="horizontal" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_list8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/Events_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/events_title"
+                            android:textSize="20sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_events"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="horizontal" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageview_account_profile"
+                    android:layout_width="139dp"
+                    android:layout_height="126dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/ic_launcher_round"
+                    app:civ_border_color="@android:color/white"
+                    app:civ_border_width="2dp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

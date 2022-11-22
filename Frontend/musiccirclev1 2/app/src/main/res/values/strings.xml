@@ -1,0 +1,212 @@
+<resources>
+    <string name="app_name">MusicCircle</string>
+    <string name="nav_drawer_open">Open nav drawer</string>
+    <string name="nav_drawer_close">Close nav drawer</string>
+    <string name="google_map_api_key">AIzaSyAeQDWbXoxZbrGJC1ihuNX9zlgYM_Lq_64</string>
+
+    <!--    Notification Strings-->
+    <string name="play_music_channel_name">play music channel</string>
+
+    <!--    Welcome Login Registration Page Strings-->
+    <string name="login_button">login</string>
+    <string name="register_button">register</string>
+
+    <!--    Discover Page Strings-->
+    <string name="search_button">Search</string>
+    <string name="create_group_button">Create Group</string>
+    <!--    For upload album btn string see Upload Album Strings-->
+    <string name="create_event_button">Create Event</string>
+    <string name="music_player_page_button">Music Player</string>
+
+    <!--    Create Group Strings-->
+    <string name="group_name_hint">Group Name</string>
+    <string name="group_description_hint">Group Description</string>
+    <string name="register_group_btn">Create Group</string>
+
+    <!--    Create Event Strings-->
+    <string name="username_hint">Your Username</string>
+    <string name="event_name_hint">Event Name</string>
+    <string name="location_hint">Location</string>
+    <string name="date_hint">Date</string>
+    <string name="time_hint">Time</string>
+    <string name="register_event_button">Create Event</string>
+
+    <!--    Upload Album Strings-->
+    <string name="album_name_hint">Album Name</string>
+    <string name="username_name_hint">Username</string>
+    <string name="song_id_hint">Song ID</string>
+    <string name="upload_album_btn">Upload Album</string>
+    <string name="title_activity_discovery_home_page">DiscoveryHomePage</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_music_player">MusicPlayerActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_blank_fragment">Hello Blank Fragment</string>
+
+    <string name="country_prompt">Choose A State</string>
+
+    <string-array name="state_arrays">
+        <item>State</item>
+        <item>AL</item>
+        <item>AK</item>
+        <item>AZ</item>
+        <item>AR</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DE</item>
+        <item>DC</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>GU</item>
+        <item>HI</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>IA</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>ME</item>
+        <item>MD</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MS</item>
+        <item>MO</item>
+        <item>MT</item>
+        <item>NE</item>
+        <item>NV</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NY</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>PR</item>
+        <item>RI</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VT</item>
+        <item>VA</item>
+        <item>WA</item>
+        <item>WV</item>
+        <item>WI</item>
+        <item>WY</item>
+    </string-array>
+
+    <string-array name="state_arrays1">
+        <item>Me</item>
+        <item>AL</item>
+        <item>AK</item>
+        <item>AZ</item>
+        <item>AR</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DE</item>
+        <item>DC</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>IA</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>ME</item>
+        <item>MD</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MS</item>
+        <item>MO</item>
+        <item>MT</item>
+        <item>NE</item>
+        <item>NV</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NY</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>PR</item>
+        <item>RI</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VT</item>
+        <item>VA</item>
+        <item>WA</item>
+        <item>WV</item>
+        <item>WI</item>
+        <item>WY</item>
+    </string-array>
+
+
+    <!-- Comments Fragment Strings -->
+    <string name="comments_text">Comments</string>
+    <string name="add_comment_hint">Add Comment</string>
+    <string name="post_comment_text">Post</string>
+
+    <!-- Comments Item Strings -->
+    <string name="comment_username_holder">usernameHolder</string>
+    <string name="comment_text_holder">textHolder</string>
+    <string name="comment_profile_content">Profile picture of the user who posted the comment</string>
+
+    <!-- Notification Center Strings -->
+    <string name="notifications_text">Notifications</string>
+
+    <!-- Profile Page Strings -->
+    <string name="followers_text">Followers</string>
+    <string name="following_text">Following</string>
+    <string name="groups_text">Groups</string>
+    <string name="events_text">Events</string>
+    <string name="follow_button_text">FOLLOW</string>
+    <string name="edit_profile_button_text">EDIT PROFILE</string>
+    <string name="num_fill_in">0</string>
+    <string name="recycler_item_name_fill_in">Item Name</string>
+    <string name="top_songs_title">Top Songs</string>
+    <string name="albums_title">Albums</string>
+    <string name="recent_uploads_title">Recently Uploaded Songs</string>
+    <string name="playlists_title">Playlists</string>
+    <string name="followers_title">Followers</string>
+    <string name="following_title">Following</string>
+    <string name="groups_title">Groups</string>
+    <string name="events_title">Events</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_search">SearchActivity</string>
+</resources>

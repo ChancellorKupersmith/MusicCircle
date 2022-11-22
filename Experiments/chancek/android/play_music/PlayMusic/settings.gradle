@@ -1,0 +1,2 @@
+rootProject.name = "PlayMusic"
+include ':app'

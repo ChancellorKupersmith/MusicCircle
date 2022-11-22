@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment_7">
+
+    <EditText
+        android:id="@+id/event_location_input"
+        android:layout_width="347dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/location_hint"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="178dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/date_input"
+        android:layout_width="169dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:inputType="date"
+        android:text="@string/date_hint"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="254dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/time_input"
+        android:layout_width="187dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="@string/time_hint"
+        tools:layout_editor_absoluteX="208dp"
+        tools:layout_editor_absoluteY="254dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/event_name_input"
+        android:layout_width="350dp"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/event_name_hint"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="108dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button_event_register"
+        android:layout_width="175dp"
+        android:layout_height="57dp"
+        android:text="@string/register_event_button"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="329dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/username_input"
+        android:layout_width="345dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/username_hint"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="46dp"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

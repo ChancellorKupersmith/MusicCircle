@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_account_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#0096FF"
+        android:layout_alignParentLeft="true" />
+
+    <ScrollView
+        android:id="@+id/scrolView_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/linear_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_account_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginRight="10dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:id="@+id/linear_account_input_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/group_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center"
+                                android:text="NAME"
+                                android:textSize="30sp"
+                                android:textStyle="bold"
+                                android:typeface="monospace" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:animateLayoutChanges="true"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="11dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/num_group_members"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="24sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Members"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/join_group"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/circular_box"
+                                android:backgroundTint="@drawable/follow_button_background_color"
+                                android:text="JOIN GROUP"
+                                android:textColor="@drawable/follow_button_text_color" />
+
+                            <Button
+                                android:id="@+id/join_group_chat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/circular_box"
+                                android:backgroundTint="@drawable/follow_button_background_color"
+                                android:text="JOIN CHAT"
+                                android:textColor="@drawable/follow_button_text_color" />
+
+                            <Button
+                                android:id="@+id/see_group_members"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/circular_box"
+                                android:backgroundTint="@drawable/follow_button_background_color"
+                                android:text="GROUP MEMBERS"
+                                android:textColor="@drawable/follow_button_text_color" />
+
+                            <Button
+                                android:id="@+id/delete_group"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/rounded_box"
+                                android:backgroundTint="@android:color/holo_red_dark"
+                                android:text="DELETE"
+                                android:textColor="@android:color/white" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/group_events_recycler_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:scrollbars="horizontal"
+                                android:layout_marginRight="10dp"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/group_songs_recycler_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:scrollbars="horizontal"
+                                android:layout_marginRight="10dp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageview_group_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/ic_launcher_round"
+                    app:civ_border_color="@android:color/white"
+                    app:civ_border_width="2dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

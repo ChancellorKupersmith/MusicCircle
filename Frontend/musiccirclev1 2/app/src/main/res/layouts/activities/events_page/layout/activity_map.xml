@@ -1,0 +1,82 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_background"
+    android:orientation="vertical">
+
+    <fragment
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        tools:context=".Activity.MapActivity" >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <ImageView
+                    android:id="@+id/fragment_map__main_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    map:tint="@android:color/darker_gray" />
+
+                <ImageView
+                    android:id="@+id/fragment_map__voice_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    map:tint="@android:color/darker_gray"  />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </fragment>
+
+    <TextView
+        android:id="@+id/map_event_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="CONCERT"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_map_event_attend"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rounded_box"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="ATTEND"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btn_map_event_delete"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rounded_box"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="DELETE"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

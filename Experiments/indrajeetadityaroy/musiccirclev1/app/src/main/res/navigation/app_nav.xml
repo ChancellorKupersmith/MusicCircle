@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/fragment_1">
+
+    <fragment
+        android:id="@+id/fragment_1"
+        android:name="com.example.musiccircle.Fragment_1"
+        android:label="fragment_1"
+        tools:layout="@layout/fragment_1" >
+        <action
+            android:id="@+id/action_fragment_1_to_fragment_2"
+            app:destination="@id/fragment_2" />
+        <action
+            android:id="@+id/action_fragment_1_to_fragment_3"
+            app:destination="@id/fragment_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_2"
+        android:name="com.example.musiccircle.fragment_2"
+        android:label="fragment_2"
+        tools:layout="@layout/fragment_2" >
+        <action
+            android:id="@+id/action_fragment_2_to_fragment_1"
+            app:destination="@id/fragment_1" />
+        <action
+            android:id="@+id/action_fragment_2_to_fragment_3"
+            app:destination="@id/fragment_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_3"
+        android:name="com.example.musiccircle.fragment_3"
+        android:label="fragment_3"
+        tools:layout="@layout/fragment_3" >
+        <action
+            android:id="@+id/action_fragment_3_to_fragment_4"
+            app:destination="@id/fragment_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_4"
+        android:name="com.example.musiccircle.fragment_4"
+        android:label="fragment_4"
+        tools:layout="@layout/fragment_4" >
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_fragment_4_to_fragment_5"
+            app:destination="@id/fragment_5" />
+        <action
+            android:id="@+id/action_fragment_4_to_fragment_6"
+            app:destination="@id/fragment_6" />
+        <action
+            android:id="@+id/action_fragment_4_to_uploadAlbumFrag"
+            app:destination="@id/uploadAlbumFrag" />
+        <action
+            android:id="@+id/action_fragment_4_to_fragment7"
+            app:destination="@id/fragment7" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_5"
+        android:name="com.example.musiccircle.fragment_5"
+        android:label="fragment_5"
+        tools:layout="@layout/fragment_5" />
+    <fragment
+        android:id="@+id/fragment_6"
+        android:name="com.example.musiccircle.fragment_6"
+        android:label="fragment_6"
+        tools:layout="@layout/fragment_6" >
+        <action
+            android:id="@+id/action_fragment_6_to_fragment_4"
+            app:destination="@id/fragment_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadAlbumFrag"
+        android:name="com.example.musiccircle.UploadAlbumFrag"
+        android:label="fragment_upload_album"
+        tools:layout="@layout/fragment_upload_album" >
+        <action
+            android:id="@+id/action_uploadAlbumFrag_to_fragment_4"
+            app:destination="@id/fragment_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment7"
+        android:name="com.example.musiccircle.fragment7"
+        android:label="fragment_fragment7"
+        tools:layout="@layout/fragment_fragment7" >
+        <action
+            android:id="@+id/action_fragment7_to_fragment_4"
+            app:destination="@id/fragment_4" />
+    </fragment>
+</navigation>

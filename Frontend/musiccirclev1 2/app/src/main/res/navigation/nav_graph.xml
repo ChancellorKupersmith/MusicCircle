@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/welcomeLoginRegistrationFragment">
+
+    <fragment
+        android:id="@+id/uploadAlbumFrag"
+        android:name="com.example.musiccircle.Throwaway_Examples.UploadAlbumFrag"
+        android:label="fragment_upload_album"
+        tools:layout="@layout/fragment_upload_album">
+        <argument
+            android:name="user_username"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_uploadAlbumFrag_to_discoverFragment"
+            app:destination="@id/discoverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeLoginRegistrationFragment"
+        android:name="com.example.musiccircle.Fragments.Login.WelcomeLoginRegistrationFragment"
+        android:label="fragment_welcome_login_registration"
+        tools:layout="@layout/fragment_welcome_login_registration">
+        <action
+            android:id="@+id/action_welcomeLoginRegistrationFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_welcomeLoginRegistrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.musiccircle.Fragments.Login.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_registrationFragment_to_welcomeLoginRegistrationFragment"
+            app:destination="@id/welcomeLoginRegistrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.musiccircle.Fragments.Login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_discoverFragment"
+            app:destination="@id/discoverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/discoverFragment"
+        android:name="com.example.musiccircle.Fragments.Home.DiscoverFragment"
+        android:label="fragment_discover"
+        tools:layout="@layout/fragment_discover">
+        <argument
+            android:name="user_username"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_discoverFragment_to_searchAllFragment"
+            app:destination="@id/searchAllFragment" />
+        <action
+            android:id="@+id/action_discoverFragment_to_createGroupFragment"
+            app:destination="@id/createGroupFragment" />
+        <action
+            android:id="@+id/action_discoverFragment_to_uploadAlbumFrag"
+            app:destination="@id/uploadAlbumFrag" />
+        <action
+            android:id="@+id/action_discoverFragment_to_createEventFragment"
+            app:destination="@id/createEventFragment" />
+        <action
+            android:id="@+id/action_discoverFragment_to_musicPlayerActivity"
+            app:destination="@id/musicPlayerActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchAllFragment"
+        android:name="com.example.musiccircle.Fragments.Search_Results.SearchAllFragment"
+        android:label="fragment_search_all"
+        tools:layout="@layout/fragment_search_all">
+        <argument
+            android:name="user_username"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.example.musiccircle.Throwaway_Examples.CreateGroupFragment"
+        android:label="fragment_create_group"
+        tools:layout="@layout/fragment_create_group">
+        <action
+            android:id="@+id/action_createGroupFragment_to_discoverFragment"
+            app:destination="@id/discoverFragment" />
+        <argument
+            android:name="user_username"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/createEventFragment"
+        android:name="com.example.musiccircle.Throwaway_Examples.CreateEventFragment"
+        android:label="fragment_create_event"
+        tools:layout="@layout/fragment_create_event">
+        <action
+            android:id="@+id/action_createEventFragment_to_discoverFragment"
+            app:destination="@id/discoverFragment" />
+        <argument android:name="user_username" />
+    </fragment>
+    <activity
+        android:id="@+id/musicPlayerActivity"
+        android:name="com.example.musiccircle.Activities.Music_Player_Page.MusicPlayerActivity"
+        android:label="activity_music_player"
+        tools:layout="@layout/activity_music_player" >
+        <argument android:name="track_list" />
+    </activity>
+    <activity
+        android:id="@+id/discoveryHomePageActivity"
+        android:name="com.example.musiccircle.Activities.Home_Page.DiscoveryHomePageActivity"
+        android:label="activity_discovery_home_page"
+        tools:layout="@layout/activity_discovery_home_page" />
+    <action
+        android:id="@+id/action_global_musicPlayerActivity"
+        app:destination="@id/musicPlayerActivity" />
+</navigation>

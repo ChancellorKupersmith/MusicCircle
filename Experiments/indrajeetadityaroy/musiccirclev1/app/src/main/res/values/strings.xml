@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MusicCircle</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--    Fragment 7 Strings-->
+    <string name="username_hint">Your Username</string>
+    <string name="event_name_hint">Event Name</string>
+    <string name="location_hint">Location</string>
+    <string name="date_hint">Date</string>
+    <string name="time_hint">Time</string>
+    <string name="register_event_button">Register Event</string>
+    <!--    Upload Album Strings-->
+    <string name="album_name_hint">Album Name</string>
+    <string name="username_name_hint">Username</string>
+    <string name="song_id_hint">Song ID</string>
+    <string name="upload_album_btn">Upload Album</string>
+</resources>

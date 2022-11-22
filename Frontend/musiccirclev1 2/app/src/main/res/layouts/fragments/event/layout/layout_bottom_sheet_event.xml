@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/bottomSheetContainer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="CREATE EVENT"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/event_img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/choose_event_img"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_box"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="CHOOSE EVENT IMAGE"
+            android:textColor="@android:color/white" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:backgroundTint="@android:color/white"
+            android:background="@drawable/rounded_box"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <EditText
+                android:id="@+id/event_name"
+                android:hint="Event Name"
+                android:inputType="textPersonName"
+                android:background="@drawable/rounded_input_box"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_height="50dp"
+                android:elevation="4dp"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp"
+                android:textSize="14sp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:backgroundTint="@android:color/white"
+            android:background="@drawable/rounded_box"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="65dp">
+
+            <EditText
+                android:id="@+id/event_street_address"
+                android:hint="Address"
+                android:inputType="textPersonName"
+                android:background="@drawable/rounded_input_box"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:elevation="4dp"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp"
+                android:textSize="14sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:backgroundTint="@android:color/white"
+            android:background="@drawable/rounded_box"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/event_city"
+                android:hint="City"
+                android:inputType="textPersonName"
+                android:background="@drawable/rounded_input_box"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:elevation="4dp"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp"
+                android:textSize="14sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_input_box"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:entries="@array/state_arrays"
+            android:prompt="@string/country_prompt" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:backgroundTint="@android:color/white"
+            android:background="@drawable/rounded_box"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/event_zipcode"
+                android:hint="ZipCode"
+                android:inputType="textPersonName"
+                android:background="@drawable/rounded_input_box"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="50dp"
+                android:elevation="4dp"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp"
+                android:textSize="14sp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/white"
+            android:background="@drawable/rounded_box"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <EditText
+                android:id="@+id/event_country"
+                android:hint="Country"
+                android:inputType="textPassword"
+                android:background="@drawable/rounded_input_box"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="50dp"
+                android:elevation="4dp"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp"
+                android:textSize="14sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:backgroundTint="@android:color/white"
+            android:background="@drawable/rounded_box"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/event_description"
+                android:hint="Few Words About The Event"
+                android:background="@drawable/rounded_input_box"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:elevation="4dp"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="6"
+                android:scrollbars="vertical"
+                tools:ignore="RtlHardcoded" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_event_musicians_choose"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_box"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="CHOOSE MUSICIANS"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_event_1"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_box"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="REGISTER EVENT"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</ScrollView>

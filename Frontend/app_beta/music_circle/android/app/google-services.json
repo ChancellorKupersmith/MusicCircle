@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "702760305141",
+    "project_id": "music-circle-c8737",
+    "storage_bucket": "music-circle-c8737.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702760305141:android:7e4b73c396106b1d3a20bc",
+        "android_client_info": {
+          "package_name": "com.app.music_circle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702760305141-2ask2nfo4b2ddb5903kgj83bnaio54qd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIEnxxaVuO9cinVOUqAeacjGLzcfsKFr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702760305141-2ask2nfo4b2ddb5903kgj83bnaio54qd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

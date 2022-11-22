@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.musiccircle">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+<!--        <activity-->
+<!--            android:name=".Activities.Search_Results_Page.SearchActivity"-->
+<!--            android:label="@string/title_activity_search"-->
+<!--            android:theme="@style/AppTheme.NoActionBar">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.SEARCH"/>-->
+<!--                <meta-data-->
+<!--                    android:name="android.app.searchable"-->
+<!--                    android:resource="@xml/searchable"/>-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+        <activity android:name=".Activities.Search_Results_Page.SearchActivity">
+            android:label="SearchActivity"
+        </activity>
+        <activity android:name=".Activities.Login.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- <activity -->
+        <!-- android:name=".ui.login.LoginActivity" -->
+        <!-- android:label="@string/title_activity_login" /> -->
+        <activity android:name=".Activities.Profile_Page.ProfilePageActivity" />
+        <activity
+            android:name=".Activities.Music_Player_Page.MusicPlayerActivity"
+            android:label="@string/title_activity_music_player"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.Home_Page.DiscoveryHomePageActivity"
+            android:label="@string/title_activity_discovery_home_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.Home_Page.MainActivity"
+            android:label="HomePageMain"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.Home_Page.NavMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.Events_Page.MapActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAeQDWbXoxZbrGJC1ihuNX9zlgYM_Lq_64" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <service
+            android:name=".Services.AudioPlayerService"
+            android:enabled="true" />
+        <service android:name=".Services.NotificationService" />
+    </application>
+
+</manifest>

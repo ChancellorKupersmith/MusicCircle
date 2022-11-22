@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomSheetContainer2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="CREATE GROUP"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/new_group_img"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
+    <Button
+        android:id="@+id/choose_new_group_img"
+        android:text="CHOOSE GROUP PROFILE IMAGE"
+        android:background="@drawable/rounded_box"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:backgroundTint="@android:color/white"
+        android:background="@drawable/rounded_box"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/new_group_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Group Name"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:backgroundTint="@android:color/white"
+        android:background="@drawable/rounded_box"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/new_group_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:backgroundTint="@android:color/white"
+        android:background="@drawable/rounded_box"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/new_group_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:maxLines="10"
+            android:minLines="6"
+            android:hint="Group Description"
+            android:scrollbars="vertical" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_group_1"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rounded_box"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="REGISTER GROUP"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

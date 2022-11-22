@@ -1,0 +1,13 @@
+	Need to compress Data:
+		Lossless vs Lossly compression
+		use both?
+
+		scan each of the audiofile and try get patterns
+			redundancy
+			psychoaudio:
+				break audio track into all of the differnet frequency bands
+				20hz-100hz 100hz-500hz and so on compress higher hz to lower bit rates
+
+		create Datastructure for holding the patterns by pattern id
+
+
